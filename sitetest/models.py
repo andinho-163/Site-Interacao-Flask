@@ -1,4 +1,4 @@
-from dinhoflix import database, login_manager
+from sitetest import database, login_manager
 from datetime import datetime, timezone
 from flask_login import UserMixin
 

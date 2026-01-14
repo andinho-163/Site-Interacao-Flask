@@ -12,7 +12,7 @@ app.config['SECRET_KEY'] = '29cecf8afd6176f06bb3f55472d490d1'
 if os.getenv("DATABASE_URL"):
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///DinhoFlix.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///SiteTeste.db'
 
 app.config['REMEMBER_COOKIE_DURATION'] = timedelta(days=7)
 
@@ -24,7 +24,7 @@ login_manager.login_message = 'Por favor, faça login para acessar esta página.
 login_manager.login_message_category = 'alert-info'
 
 
-from dinhoflix import models
+from sitetest import models
 engine = sqlalchemy.create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
 inspector = sqlalchemy.inspect(engine)
 if not inspector.has_table("usuario"):
@@ -36,4 +36,4 @@ else:
     print("Base de Dados já existente")
 
 
-from dinhoflix import routes
+from sitetest import routes
