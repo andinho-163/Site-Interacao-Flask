@@ -1,0 +1,20 @@
+# Cache do Python (Arquivos compilados que "sujam" o repositório)
+__pycache__/
+*.pyc
+
+# Ambiente Virtual (Pasta pesada que o GitHub não deve guardar)
+.venv/
+venv/
+
+# Banco de Dados Local
+# Protege seus dados de teste e evita conflitos com o Postgres do Railway
+instance/
+*.db
+SiteTeste.db
+
+# Arquivos de backup ou duplicados
+Procfile (2)
+
+# Configurações da IDE (PyCharm/VSCode)
+.idea/
+.vscode/
